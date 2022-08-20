@@ -104,7 +104,7 @@ const mutation = new GraphQLObjectType({
     },
 
     // Add project
-    addProdject: {
+    addProject: {
       type: ProjectType,
       args: {
         name: { type: new GraphQLNonNull(GraphQLString) },
