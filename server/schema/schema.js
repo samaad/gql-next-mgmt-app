@@ -93,10 +93,10 @@ const mutation = new GraphQLObjectType({
       },
     },
     // Delete Client
-    deleteClietn: {
+    deleteClient: {
       type: ClientType,
       args: {
-        id: { type: new GraphQLNonNull(GraphQLString) },
+        id: { type: new GraphQLNonNull(GraphQLID) },
       },
       resolve(parent, args) {
         return Client.findByIdAndRemove(args.id);
@@ -138,7 +138,7 @@ const mutation = new GraphQLObjectType({
     deleteProject: {
       type: ProjectType,
       args: {
-        id: { type: new GraphQLNonNull(GraphQLString) },
+        id: { type: new GraphQLNonNull(GraphQLID) },
       },
       resolve(parent, args) {
         return Project.findByIdAndRemove(args.id);
